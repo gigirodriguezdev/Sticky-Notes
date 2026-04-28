@@ -1,0 +1,51 @@
+.hintBar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  z-index: 1000;
+  pointer-events: none;
+  user-select: none;
+  animation: hintEnter 320ms var(--ease-out);
+}
+
+.sparkle {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.sep {
+  color: var(--color-text-subtle);
+  margin: 0 -2px;
+}
+
+.kbd {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+@keyframes hintEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
